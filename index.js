@@ -8,3 +8,15 @@ btn.addEventListener("click", () => {
 content.addEventListener("click", () => {
   sidebar.classList.remove("active");
 });
+
+let lastScroll = 0;
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY < lastScroll) {
+    sidebar.style.top = "30px";
+  } else {
+    sidebar.style.top = "-100px";
+  }
+
+  lastScroll = window.scrollY;
+});

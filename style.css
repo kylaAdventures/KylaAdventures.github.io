@@ -23,6 +23,7 @@ p {
 
 body {
   background-color: #383838;
+  /* background-image: url(b6.png); */
   min-width: 100vh;
 }
 
@@ -40,7 +41,7 @@ p {
   padding: 30px 50px;
 }
 #side-bar {
-  position: absolute;
+  position: fixed;
   border: 1px solid rgba(46, 176, 124, 0.854);
   border-radius: 0px 20px 20px 0px;
   width: 230px;
@@ -53,7 +54,7 @@ p {
 }
 .toggle-btn {
   position: absolute;
-  top: 30px;
+  top: 40px;
   left: 240px;
   cursor: pointer;
   height: 50px;
