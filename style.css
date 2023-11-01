@@ -64,6 +64,9 @@ p {
   z-index: 4;
   text-align: center;
 }
+#side-bar:hover {
+  border-color: rgba(20, 254, 219, 0.402);
+}
 .toggle-btn {
   position: absolute;
   top: 30px;
@@ -81,6 +84,11 @@ p {
   display: block;
   margin-top: 4px;
   transition: 0.3s ease;
+  box-shadow: 3px 5px 0px 0px #2f2828;
+}
+
+.toggle-btn span:hover {
+  border-color: rgb(20, 254, 219);
 }
 li {
   color: #292929;
@@ -126,6 +134,22 @@ li:hover {
 
 #side-bar.active {
   left: 0;
+}
+#side-bar.active .toggle-btn span {
+  /* display: none; */
+  box-shadow: 0px 0px 0px 0px #2f282800;
+  border: 1px solid rgba(46, 176, 124, 0.854);
+}
+#side-bar.active .toggle-btn:hover {
+  animation: label1 0.6s infinite linear;
+}
+@keyframes label1 {
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
 }
 
 .active span {
@@ -175,7 +199,6 @@ li:hover {
     width: 220px;
     height: 30%;
   }
-
   #side-bar.active .toggle-btn {
     position: absolute;
     top: 50px;
@@ -183,7 +206,9 @@ li:hover {
   }
   #side-bar.active .toggle-btn span {
     /* display: none; */
+    box-shadow: 0px 0px 0px 0px #2f282800;
   }
+
   .toggle-btn {
     top: 45px;
   }
