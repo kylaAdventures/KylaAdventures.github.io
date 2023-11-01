@@ -1,0 +1,2 @@
+mettre le background image en center pour préparer le parallax scroll
+modifer l'image pour le mode miroir

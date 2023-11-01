@@ -23,7 +23,10 @@ p {
 
 body {
   background-color: #383838;
-  /* background-image: url(b6.png); */
+  /* background-image: url(b1.jpg);
+  background-size: contain;
+  background-repeat: repeat-x;
+  background-attachment: fixed; */
   min-width: 100vh;
 }
 
