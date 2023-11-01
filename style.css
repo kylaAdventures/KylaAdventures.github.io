@@ -19,6 +19,7 @@ p {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
@@ -27,12 +28,18 @@ body {
   background-size: contain;
   background-repeat: repeat-x;
   background-attachment: fixed; */
-  min-width: 100vh;
+  min-height: 100vh;
 }
 
 .content {
   color: #151616;
   transition: 1s;
+}
+.col-grid1 {
+  margin-top: 60px;
+  display: grid;
+  text-align: left;
+  padding: 10px;
 }
 h1 {
   text-transform: uppercase;
@@ -41,30 +48,32 @@ h1 {
   margin-top: 20px;
 }
 p {
-  padding: 30px 50px;
+  font-size: 20px;
+  padding: 30px;
 }
 #side-bar {
   position: fixed;
   border: 1px solid rgba(46, 176, 124, 0.854);
   border-radius: 0px 20px 20px 0px;
   width: 230px;
-  height: 75%;
+  height: 50%;
   background: #3547426d;
-  top: 0;
+  top: 30px;
   left: -230px;
-  transition: 0.5s ease-out;
+  transition: 0.7s ease-out;
   z-index: 4;
+  text-align: center;
 }
 .toggle-btn {
   position: absolute;
-  top: 40px;
+  top: 30px;
   left: 240px;
   cursor: pointer;
   height: 50px;
   width: 50px;
 }
 .toggle-btn span {
-  width: 60px;
+  width: 45px;
   height: 10px;
   border: 1px solid rgba(46, 176, 124, 0.854);
   border-radius: 5px;
@@ -78,7 +87,16 @@ li {
   list-style: none;
   font-size: 2.5rem;
   cursor: pointer;
-  padding-left: 5px;
+  /* padding-left: 5px; */
+  border: 1px solid rgba(20, 254, 219, 0);
+  border-radius: 20px 0px;
+  margin: 0 0 10px 0;
+  padding: 10px;
+}
+
+.li-hover-border {
+  border: 1px solid rgba(20, 254, 219, 0);
+  border-radius: 0px 20px;
 }
 li:hover {
   background: #23c7d35a;
@@ -124,4 +142,96 @@ li:hover {
 }
 .active ~ .content {
   opacity: 0.3;
+}
+
+/* --------------------------- */
+
+/* Ajoutez ces styles à votre CSS pour rendre votre site réactif */
+
+/* Pour les petits écrans (par exemple, les smartphones) */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .col-grid1 {
+    margin-top: 60px;
+    display: grid;
+    text-align: left;
+    padding: 10px;
+  }
+
+  p {
+    font-size: 20px;
+    padding: 20px;
+  }
+  #side-bar {
+    width: 220px;
+    height: 30%;
+  }
+
+  #side-bar.active .toggle-btn {
+    position: absolute;
+    top: 50px;
+    left: 220px;
+  }
+  #side-bar.active .toggle-btn span {
+    /* display: none; */
+  }
+  .toggle-btn {
+    top: 45px;
+  }
+  li {
+    margin: 10px auto;
+    padding: 6px;
+  }
+  .li-hover-border {
+    margin: 0;
+  }
+
+  li:hover {
+    padding: 6px;
+  }
+
+  .li-hover-border:hover {
+    padding: 6px;
+  }
+}
+
+/* Pour les écrans moyens (par exemple, les tablettes) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: 5px;
+    line-height: 26px;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  p {
+    padding: 30px 40px;
+  }
+}
+
+/* Pour les grands écrans (par exemple, les ordinateurs de bureau) */
+@media screen and (min-width: 1025px) {
+  body {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  p {
+    padding: 30px 50px;
+  }
 }

@@ -13,7 +13,7 @@ let lastScroll = 0;
 
 window.addEventListener("scroll", () => {
   if (window.scrollY < lastScroll) {
-    sidebar.style.top = 0;
+    sidebar.style.top = "30px";
   } else {
     sidebar.style.top = "-100px";
   }
