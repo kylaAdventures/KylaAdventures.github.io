@@ -118,6 +118,11 @@ p {
 #side-bar:hover {
   border-color: rgba(20, 254, 219, 0.402);
 }
+
+.title-container {
+  margin-bottom: 10px;
+  z-index: 4;
+}
 .toggle-btn {
   position: absolute;
   top: 30px;
