@@ -138,7 +138,7 @@ p {
   box-shadow: 3px 4px 0px 0px #0e0d0d;
 }
 
-.toggle-btn span:hover {
+.toggle-btn:hover span {
   border-color: rgb(20, 254, 219);
 }
 li {
