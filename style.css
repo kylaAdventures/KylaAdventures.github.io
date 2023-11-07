@@ -109,7 +109,6 @@ p {
   transition: 0.7s ease-out;
   z-index: 4;
   text-align: center;
-  max-height: 100vh;
 }
 #side-bar:hover {
   border-color: rgba(20, 254, 219, 0.402);
