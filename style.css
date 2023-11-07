@@ -79,12 +79,7 @@ body {
   /* color: #419169; */
   transition: 1s;
 }
-/* .col-grid1 {
-  margin-top: 60px;
-  display: grid;
-  text-align: left;
-  padding: 10px;
-} */
+
 h1 {
   text-transform: uppercase;
   text-align: center;
@@ -114,6 +109,7 @@ p {
   transition: 0.7s ease-out;
   z-index: 4;
   text-align: center;
+  max-height: 100vh;
 }
 #side-bar:hover {
   border-color: rgba(20, 254, 219, 0.402);
