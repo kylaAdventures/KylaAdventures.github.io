@@ -294,6 +294,16 @@ li:hover {
   p {
     padding: 30px 40px;
   }
+  #side-bar {
+    width: 220px;
+    height: 30%;
+    top: 160px;
+  }
+  #side-bar.active .toggle-btn {
+    position: absolute;
+    top: 50px;
+    left: 220px;
+  }
 }
 
 /* Pour les grands écrans (par exemple, les ordinateurs de bureau) */
