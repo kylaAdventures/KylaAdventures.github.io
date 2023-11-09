@@ -26,8 +26,9 @@ let timeout;
 const viewportHeight = window.innerHeight;
 
 window.addEventListener("scroll", () => {
-  let scrollValue =
-    (window.scrollY + viewportHeight) / document.body.offsetHeight;
+  const scrollValue =
+    window.scrollY / (document.body.offsetHeight - viewportHeight);
+
   if (window.scrollY < lastScroll || scrollValue < 0.2) {
     clearTimeout(timeout);
     navbar.style.opacity = "1";
