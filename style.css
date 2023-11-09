@@ -16,7 +16,12 @@ body {
   background-attachment: fixed; */
   min-height: 100vh;
 }
-
+#content {
+  background-color: rgba(24, 23, 23, 0.103);
+  min-height: 100vh;
+  padding: 15px 0; /* Ajoutez un espace en haut et en bas */
+  z-index: -10;
+}
 #navbar {
   position: fixed;
   width: 100%;
