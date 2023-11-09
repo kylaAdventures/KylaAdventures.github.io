@@ -16,13 +16,6 @@ body {
   background-attachment: fixed; */
   min-height: 100vh;
 }
-.backround-color {
-  position: fixed;
-  background: linear-gradient(180deg, #282c37, #1a1c24);
-  height: 100%;
-  width: 100%;
-  z-index: -10;
-}
 
 #navbar {
   position: fixed;
