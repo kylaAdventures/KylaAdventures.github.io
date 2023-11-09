@@ -22,6 +22,7 @@ body {
   padding: 15px 0; /* Ajoutez un espace en haut et en bas */
   z-index: -10;
 }
+
 #navbar {
   position: fixed;
   width: 100%;
