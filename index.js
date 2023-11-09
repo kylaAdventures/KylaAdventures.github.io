@@ -23,11 +23,10 @@
 const navbar = document.getElementById("navbar");
 let lastScroll = 0;
 let timeout;
-const viewportHeight = window.innerHeight;
 
 window.addEventListener("scroll", () => {
   const scrollValue =
-    window.scrollY / (document.body.offsetHeight - viewportHeight);
+    window.scrollY / (document.body.offsetHeight - window.innerHeight);
 
   if (window.scrollY < lastScroll || scrollValue < 0.2) {
     clearTimeout(timeout);
