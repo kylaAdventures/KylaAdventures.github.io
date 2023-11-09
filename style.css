@@ -86,9 +86,10 @@ a:hover {
   padding: 15px 8%;
 }
 .container p {
-  border: 0.8px solid rgb(180 136 63 / 25%);
   margin: 10px 0;
-  border-radius: 10px;
+  border: 1px solid rgb(164 121 46 / 85%);
+  background: rgba(49, 54, 51, 0.288);
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
 }
 .content {
