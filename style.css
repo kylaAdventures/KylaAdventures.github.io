@@ -24,11 +24,12 @@ body {
 }
 #content {
   min-height: 100vh;
-  padding: 15px 0; /* Ajoutez un espace en haut et en bas */
+  padding: 5px 0; /* Ajoutez un espace en haut et en bas */
   z-index: -10;
 }
 
 #navbar {
+  opacity: 1;
   position: fixed;
   width: 100%;
   border: 1px solid rgb(164 121 46 / 85%);
