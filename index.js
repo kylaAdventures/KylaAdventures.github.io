@@ -1,32 +1,20 @@
 const navbar = document.getElementById("navbar");
 
 let lastScroll = 0;
-
-// window.addEventListener("scroll", () => {
-//   if (window.scrollY < lastScroll) {
-//     navbar.style.opacity = "1";
-//     navbar.style.visibility = "visible";
-//   } else {
-//     navbar.style.opacity = "0";
-//     navbar.style.visibility = "hidden";
-//   }
-
-//   lastScroll = window.scrollY;
-// });
-
 let timeout;
-
 window.addEventListener("scroll", () => {
-  if (window.scrollY < lastScroll) {
+  let scrollValue =
+    (window.scrollY + window.innerHeight) / document.body.offsetHeight;
+  if (window.scrollY < lastScroll || scrollValue > 0.15) {
     clearTimeout(timeout);
     navbar.style.opacity = "1";
     navbar.style.visibility = "visible";
   } else {
-    clearTimeout(timeout); // annuler le délai précédent
+    clearTimeout(timeout);
     timeout = setTimeout(() => {
       navbar.style.opacity = "0";
       navbar.style.visibility = "hidden";
-    }, 1000); // 3000 ms = 3 s
+    }, 1000);
   }
 
   lastScroll = window.scrollY;
