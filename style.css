@@ -24,7 +24,7 @@ body {
 }
 #content {
   min-height: 100vh;
-  padding: 5px 0; /* Ajoutez un espace en haut et en bas */
+  padding: 0.1px 0; /* Ajoutez un espace en haut et en bas */
   z-index: -10;
 }
 
