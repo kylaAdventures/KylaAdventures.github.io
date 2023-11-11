@@ -42,7 +42,7 @@ body {
   background: rgba(49, 54, 51, 0.288);
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
-  height: 12%;
+  height: 71px;
   transition: 0.7s ease-out;
   z-index: 4;
 }
@@ -75,6 +75,7 @@ li:hover {
   border: 1px solid rgb(20, 254, 219);
   border-radius: 20px 0px;
 }
+
 .logo {
   height: 25px;
   width: 25px;
@@ -212,9 +213,9 @@ p {
     font-size: 16px;
     line-height: 24px;
   }
-  #navbar ul li {
+  /* #navbar ul li {
     height: 6%;
-  }
+  } */
   h1 {
     font-size: 2rem;
     text-align: center;
@@ -235,7 +236,6 @@ p {
     text-align: center;
   }
   li {
-    margin: 10px auto;
     padding: 6px;
     font-size: 1.5rem;
   }
@@ -244,14 +244,10 @@ p {
     padding: 20px;
   }
 
-  /* li:hover {
-    padding: 6px;
-  } */
-
   li:hover {
     border-radius: 20px 0px;
     width: 100%;
-    height: 65%;
+    height: 100%;
   }
 }
 
@@ -261,9 +257,7 @@ p {
     font-size: 5px;
     line-height: 26px;
   }
-  #navbar ul li {
-    height: 6%;
-  }
+
   h1 {
     font-size: 3.5rem;
   }
@@ -274,6 +268,11 @@ p {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr 1fr 1fr 1fr;
     text-align: center;
+  }
+  li:hover {
+    border-radius: 20px 0px;
+    width: 100%;
+    height: 100%;
   }
   p {
     padding: 30px 40px;
@@ -286,9 +285,7 @@ p {
     font-size: 20px;
     line-height: 28px;
   }
-  #navbar ul li {
-    height: 6%;
-  }
+
   h1 {
     font-size: 4rem;
   }
@@ -298,6 +295,11 @@ p {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr 1fr 1fr 1fr;
     text-align: center;
+  }
+  li:hover {
+    border-radius: 20px 0px;
+    width: 100%;
+    height: 100%;
   }
   p {
     padding: 30px 50px;
