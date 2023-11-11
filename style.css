@@ -11,14 +11,15 @@ body {
   background: linear-gradient(180deg, #282c37, #1a1c24);
   position: absolute;
   min-height: 100vh;
-}
-.bg {
-  /* background: linear-gradient(180deg, #282c37, #1a1c24);
-   */
   background-image: url(./pic/b1.jpg);
   background-size: contain;
   background-repeat: repeat;
   background-attachment: fixed;
+}
+.bg {
+  /* background: linear-gradient(180deg, #282c37, #1a1c24);
+   */
+
   z-index: -1;
   position: fixed;
   height: 100vh;
