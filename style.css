@@ -35,7 +35,7 @@ body {
   backdrop-filter: blur(20px);
   height: 71px;
   transition: 0.7s ease-out;
-  z-index: 6;
+  z-index: 4;
 }
 #navbar:hover {
   border-color: rgba(20, 254, 219, 0.402);
@@ -129,7 +129,6 @@ h1 {
 p {
   position: relative;
   color: rgba(176, 176, 176, 0.817);
-  z-index: 1;
 }
 
 .gallery {
