@@ -10,15 +10,10 @@
 body {
   background: linear-gradient(180deg, #282c37, #1a1c24);
   position: absolute;
-  /* background-image: url(b1.jpg);
-  background-size: contain;
-  background-repeat: repeat-x;
-  background-attachment: fixed; */
   min-height: 100vh;
 }
 .bg {
-  background-color: rgba(24, 23, 23, 0.103);
-  background-image: url(./pic/b1.jpg);
+  background: linear-gradient(180deg, #282c37, #1a1c24);
   background-size: contain;
   background-repeat: repeat;
   background-attachment: fixed;
@@ -32,7 +27,7 @@ body {
   padding: 0.1px 0; /* Ajoutez un espace en haut et en bas */
   z-index: -10;
 }
-
+/* ------------------------------ */
 #navbar {
   opacity: 1;
   position: fixed;
@@ -62,10 +57,8 @@ li {
   list-style: none;
   font-size: 2rem;
   cursor: pointer;
-  /* padding-left: 5px; */
   border: 1px solid rgba(20, 254, 219, 0);
   border-radius: 20px 0px;
-  /* margin: 0 0 10px 0; */
   padding: 10px;
 }
 
@@ -102,17 +95,7 @@ a:hover {
   text-decoration: none;
   color: inherit;
 }
-
-#canvas1 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, #282c37, #1a1c24);
-  z-index: -2;
-  min-height: 100vh;
-}
+/* ------------------------------- */
 .container {
   width: 100%;
   display: flex;
@@ -134,13 +117,16 @@ a:hover {
   color: #6c6f6f;
   transition: 1s;
 }
-h1 {
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 4rem;
-  margin-top: 150px;
 
-  text-shadow: rgba(0, 0, 0, 0.5) 0px 5px 0px;
+h1 {
+  background-image: url(./pic/B2.PNG);
+  padding: 15px;
+  text-align: center;
+  line-height: 600%;
+  background-repeat: no-repeat;
+  background-size: 100% auto; /* Redimensionne l'image pour qu'elle remplisse la largeur du titre */
+  background-position: center center; /* Centre l'image dans le titre */
+  color: transparent; /* Rend le texte transparent */
 }
 p {
   position: relative;
@@ -204,8 +190,7 @@ p {
 }
 
 /* --------------------------- */
-
-/* Ajoutez ces styles à votre CSS pour rendre votre site réactif */
+/* ----------RESPONSIVE-------------- */
 
 /* Pour les petits écrans (par exemple, les smartphones) */
 @media screen and (max-width: 768px) {
@@ -215,10 +200,9 @@ p {
   }
 
   h1 {
-    font-size: 2rem;
-    text-align: center;
-    margin-top: 100px;
-    margin-bottom: -80px;
+    padding: 60px;
+    line-height: 500%;
+    margin-bottom: -100px;
   }
   .col-grid1 {
     margin-top: 60px;
