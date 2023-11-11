@@ -7,11 +7,11 @@
   box-sizing: border-box;
 }
 html {
-  /* background: linear-gradient(180deg, #282c37, #1a1c24); */
-  background-image: linear-gradient(to top, #1f2226, #2a323c);
+  background: linear-gradient(to top, #1f2226, #2a323c);
 }
 body {
-  /* background: linear-gradient(180deg, #282c37, #1a1c24); */
+  background: linear-gradient(to top, #1f2226, #2a323c);
+
   min-height: 100svh;
   width: 100%;
 }
