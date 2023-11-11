@@ -7,7 +7,8 @@
   box-sizing: border-box;
 }
 html {
-  background: #1f2226;
+  /* background: black; */
+  background: rgb(41, 40, 40);
 }
 body {
   background: linear-gradient(to top, #1f2226, #2a323c);
