@@ -13,7 +13,9 @@ body {
   min-height: 100vh;
 }
 .bg {
-  background: linear-gradient(180deg, #282c37, #1a1c24);
+  /* background: linear-gradient(180deg, #282c37, #1a1c24);
+   */
+  background-image: url(./pic/b1.jpg);
   background-size: contain;
   background-repeat: repeat;
   background-attachment: fixed;
