@@ -6,10 +6,14 @@
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
-
+html {
+  height: -webkit-fill-available;
+}
 body {
   background: linear-gradient(180deg, #282c37, #1a1c24);
   min-height: 100vh;
+  width: 100%;
+  height: -webkit-fill-available;
 }
 
 #content {
