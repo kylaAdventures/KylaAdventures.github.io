@@ -9,14 +9,12 @@
 
 body {
   background: linear-gradient(180deg, #282c37, #1a1c24);
-  position: static;
   min-height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 .bg {
-  /* z-index: -1; */
   position: fixed;
   height: 100vh;
   width: 100vw;
@@ -24,7 +22,6 @@ body {
 #content {
   min-height: 100vh;
   padding: 0.1px 0; /* Ajoutez un espace en haut et en bas */
-  z-index: -10;
 }
 /* ------------------------------ */
 #navbar {
