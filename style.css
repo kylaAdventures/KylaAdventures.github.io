@@ -7,12 +7,10 @@
   box-sizing: border-box;
 }
 html {
-  /* background: black; */
-  background: rgb(41, 40, 40);
+  background: rgb(38, 38, 38);
 }
 body {
-  background: linear-gradient(to top, #1f2226, #2a323c);
-
+  background: rgb(38, 38, 38);
   min-height: 100svh;
   width: 100%;
 }
