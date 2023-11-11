@@ -16,11 +16,9 @@ body {
 }
 .bg {
   position: fixed;
-  height: 100vh;
   width: 100vw;
 }
 #content {
-  min-height: 100vh;
   padding: 0.1px 0; /* Ajoutez un espace en haut et en bas */
 }
 /* ------------------------------ */
