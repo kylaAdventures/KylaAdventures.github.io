@@ -8,12 +8,11 @@
 }
 
 body {
-  background: linear-gradient(180deg, #282c37, #1a1c24);
+  background: url(./pic/b1.jpg), linear-gradient(180deg, #282c37, #1a1c24);
   position: absolute;
   min-height: 100vh;
-  background-image: url(./pic/b1.jpg);
-  background-size: contain;
-  background-repeat: repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-attachment: fixed;
 }
 .bg {
