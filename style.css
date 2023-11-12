@@ -38,7 +38,6 @@ body {
   backdrop-filter: blur(20px);
   height: 71px;
   transition: 0.7s ease-out;
-
   z-index: 4;
 }
 #navbar:hover {
@@ -53,7 +52,8 @@ ul {
 }
 
 li {
-  color: #988f8fae;
+  /* color: #c8d4d4; */
+  color: #cfd4d4;
   list-style: none;
   cursor: pointer;
   border: 1px solid rgba(20, 254, 219, 0);
