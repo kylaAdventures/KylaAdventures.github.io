@@ -1,9 +1,17 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins");
+/* @font-face {
+  font-family: "Orbitron";
+  src: url(./Assets/fonts/Orbitron-Regular.ttf);
+} */
+@font-face {
+  font-family: "Iceland";
+  src: url(./Assets/fonts/Iceland-Regular.ttf);
+}
 
 * {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Orbitron", sans-serif; */
+  font-family: "Iceland", sans-serif;
   box-sizing: border-box;
 }
 html {
