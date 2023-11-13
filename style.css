@@ -47,6 +47,7 @@ body {
   transition: 0.7s ease-out;
   z-index: 4;
 }
+
 #navbar:hover {
   border-color: var(--color3BorderHover);
 }
@@ -66,6 +67,11 @@ li {
   border-radius: 20px 0px;
   padding: 10px;
   font-size: 3rem;
+  position: relative;
+}
+
+li:active {
+  transform: scale(0.85);
 }
 
 li:hover {
@@ -102,15 +108,23 @@ a:hover {
   color: inherit;
 }
 /* ------------------------------- */
-.container {
+/* .container {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 15px 8%;
+} */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 15px 8%;
 }
+
 .container p {
   text-align: left;
+  position: relative;
   margin-bottom: 20px;
   border: 1px solid var(--color4BorderP);
   border-radius: 20px 0 5px 5px;
@@ -120,6 +134,7 @@ a:hover {
   box-shadow: rgba(15, 15, 13, 0.989) 2px 2px 6px 0px;
   font-size: 2.3rem;
 }
+
 .content {
   color: var(--color0Content);
   transition: 1s;
@@ -138,6 +153,35 @@ a:hover {
 p {
   position: relative;
   color: var(--color4PText);
+  font-size: 20px;
+  padding: 30px;
+  line-height: 30px;
+}
+p::selection {
+  background: #378f99f9;
+  color: var(--color2LiTextHover);
+}
+/* .matriach {
+  height: 500px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 10px;
+} */
+
+.matriach {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin: 100px auto;
+}
+.matriach img {
+  height: auto;
+  border-radius: 5px;
+  width: 70vw;
+  place-self: center;
+  box-shadow: 0px 5px 8px 0px #000000;
+  transition: 0.3s;
 }
 
 .gallery {
@@ -163,9 +207,13 @@ h2 {
   margin: 20px 0;
   text-shadow: rgba(0, 0, 0, 0.5) 0px 5px 0px;
 }
-p {
-  font-size: 20px;
-  padding: 30px;
+h2 {
+  animation: borderAnim 5s alternate-reverse infinite;
+}
+@keyframes borderAnim {
+  100% {
+    color: #777e7eba;
+  }
 }
 
 /* --------------------------- */
@@ -178,11 +226,11 @@ p {
     line-height: 24px;
   }
 
-  .col-grid1 {
+  /* .col-grid1 {
     display: grid;
     text-align: left;
     padding: 10px;
-  }
+  } */
   #navbar {
     height: 54px;
   }
@@ -236,6 +284,7 @@ p {
     width: 100%;
     height: 100%;
   }
+
   .container p {
     font-size: 2rem;
   }
