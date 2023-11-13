@@ -1,12 +1,19 @@
-/* @font-face {
-  font-family: "Orbitron";
-  src: url(./Assets/fonts/Orbitron-Regular.ttf);
-} */
 @font-face {
   font-family: "Iceland";
   src: url(./Assets/fonts/Iceland-Regular.ttf);
 }
-
+:root {
+  --color0Bg: rgb(38, 38, 38);
+  --color0Content: #6c6f6f;
+  --color1NavbarBg: rgba(49, 54, 51, 0.288);
+  --color2LiText: #cfd4d4;
+  --color2LiBgHover: #23c7d35a;
+  --color2LiTextHover: #1ef9f2;
+  --color2LiBorderHover: rgb(20, 254, 219);
+  --color3BorderHover: rgba(20, 254, 219, 0.402);
+  --color4PText: rgba(176, 176, 176, 0.817);
+  --color4BorderP: rgb(164 121 46 / 85%);
+}
 * {
   margin: 0;
   padding: 0;
@@ -15,10 +22,10 @@
   box-sizing: border-box;
 }
 html {
-  background: rgb(38, 38, 38);
+  background: var(--color0Bg);
 }
 body {
-  background: rgb(38, 38, 38);
+  background: var(--color0Bg);
   min-height: 100svh;
   width: 100%;
 }
@@ -31,9 +38,9 @@ body {
   opacity: 1;
   position: fixed;
   width: 100%;
-  border: 1px solid rgb(164 121 46 / 85%);
+  border: 1px solid var(--color4BorderP);
   border-radius: 0px 0px 20px 20px;
-  background: rgba(49, 54, 51, 0.288);
+  background: var(--color1NavbarBg);
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   height: 71px;
@@ -41,7 +48,7 @@ body {
   z-index: 4;
 }
 #navbar:hover {
-  border-color: rgba(20, 254, 219, 0.402);
+  border-color: var(--color3BorderHover);
 }
 ul {
   margin: 0;
@@ -52,8 +59,7 @@ ul {
 }
 
 li {
-  /* color: #c8d4d4; */
-  color: #cfd4d4;
+  color: var(--color2LiText);
   list-style: none;
   cursor: pointer;
   border: 1px solid rgba(20, 254, 219, 0);
@@ -63,9 +69,9 @@ li {
 }
 
 li:hover {
-  background: #23c7d35a;
-  color: #1ef9f2;
-  border: 1px solid rgb(20, 254, 219);
+  background: var(--color2LiBgHover);
+  color: var(--color2LiTextHover);
+  border: 1px solid var(--color2LiBorderHover);
   border-radius: 20px 0px;
 }
 
@@ -106,16 +112,16 @@ a:hover {
 .container p {
   text-align: left;
   margin-bottom: 20px;
-  border: 1px solid rgb(164 121 46 / 85%);
+  border: 1px solid var(--color4BorderP);
   border-radius: 20px 0 5px 5px;
-  background: rgba(49, 54, 51, 0.288);
+  background: var(--color1NavbarBg);
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   box-shadow: rgba(15, 15, 13, 0.989) 2px 2px 6px 0px;
   font-size: 2.3rem;
 }
 .content {
-  color: #6c6f6f;
+  color: var(--color0Content);
   transition: 1s;
 }
 
@@ -131,7 +137,7 @@ a:hover {
 
 p {
   position: relative;
-  color: rgba(176, 176, 176, 0.817);
+  color: var(--color4PText);
 }
 
 .gallery {
