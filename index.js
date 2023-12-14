@@ -1,26 +1,7 @@
-// const navbar = document.getElementById("navbar");
+const buttons = document.querySelectorAll(".btn");
+const slides = document.querySelectorAll(".slide");
 
-// let lastScroll = 0;
-// let timeout;
-// window.addEventListener("scroll", () => {
-//   let scrollValue =
-//     (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-//   if (window.scrollY < lastScroll || scrollValue < 0.2) {
-//     clearTimeout(timeout);
-//     navbar.style.opacity = "1";
-//     navbar.style.visibility = "visible";
-//   } else {
-//     clearTimeout(timeout);
-//     timeout = setTimeout(() => {
-//       navbar.style.opacity = "0";
-//       navbar.style.visibility = "hidden";
-//     }, 1000);
-//   }
-
-//   lastScroll = window.scrollY;
-// });
-
-const navbar = document.getElementById("navbar");
+const navbar = document.querySelector("nav");
 let lastScroll = 0;
 let timeout;
 
@@ -55,6 +36,24 @@ document.querySelectorAll("li").forEach(function (li) {
     if (a) {
       a.click();
     }
+  });
+});
+
+// le carousel
+// tableau d'images [0,1,2]
+
+buttons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    const calNextSlide = e.target.id === "next" ? 1 : -1;
+    const slideActive = document.querySelector(".active");
+
+    newIndex = calNextSlide + [...slides].indexOf(slideActive);
+
+    if (newIndex < 0) newIndex = [...slides].length - 1;
+    if (newIndex >= [...slides].length) newIndex = 0;
+    slides[newIndex].classList.add("active");
+
+    slideActive.classList.remove("active");
   });
 });
 
