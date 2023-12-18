@@ -1,26 +1,7 @@
-// const navbar = document.getElementById("navbar");
+const buttons = document.querySelectorAll(".btn");
+const slides = document.querySelectorAll(".slide");
 
-// let lastScroll = 0;
-// let timeout;
-// window.addEventListener("scroll", () => {
-//   let scrollValue =
-//     (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-//   if (window.scrollY < lastScroll || scrollValue < 0.2) {
-//     clearTimeout(timeout);
-//     navbar.style.opacity = "1";
-//     navbar.style.visibility = "visible";
-//   } else {
-//     clearTimeout(timeout);
-//     timeout = setTimeout(() => {
-//       navbar.style.opacity = "0";
-//       navbar.style.visibility = "hidden";
-//     }, 1000);
-//   }
-
-//   lastScroll = window.scrollY;
-// });
-
-const navbar = document.getElementById("navbar");
+const navbar = document.querySelector("nav");
 let lastScroll = 0;
 let timeout;
 
@@ -43,18 +24,63 @@ window.addEventListener("scroll", () => {
   lastScroll = window.scrollY;
 });
 
-document.querySelectorAll("li").forEach(function (li) {
+// document.querySelectorAll("li").forEach(function (li) {
+//   li.addEventListener("mouseover", function (event) {
+//     li.style.cursor = "pointer";
+//   });
+//   li.addEventListener("mouseout", function (event) {
+//     li.style.cursor = "";
+//   });
+//   li.addEventListener("click", function (event) {
+//     const a = li.querySelector("a");
+//     if (a) {
+//       a.click();
+//     }
+//   });
+// });
+
+document.querySelectorAll("nav li").forEach(function (li) {
   li.addEventListener("mouseover", function (event) {
     li.style.cursor = "pointer";
   });
   li.addEventListener("mouseout", function (event) {
     li.style.cursor = "";
   });
+
+  // Utilisez l'événement sur le <a> au lieu du <li>
+  li.querySelector("a").addEventListener("click", function (event) {
+    event.stopPropagation(); // Empêche la propagation de l'événement au parent (li)
+  });
+
   li.addEventListener("click", function (event) {
     const a = li.querySelector("a");
     if (a) {
-      a.click();
+      // Vérifiez si la cible du clic est l'icône (fa-x-twitter)
+      if (!event.target.classList.contains("fa-x-twitter")) {
+        a.click();
+      } else {
+        // Gérez le clic sur l'icône ici (par exemple, ouvrir le lien dans une nouvelle fenêtre)
+        window.open(a.getAttribute("href"), "_blank");
+      }
     }
+  });
+});
+
+// le carousel
+// tableau d'images [0,1,2]
+
+buttons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    const calNextSlide = e.target.id === "next" ? 1 : -1;
+    const slideActive = document.querySelector(".active");
+
+    newIndex = calNextSlide + [...slides].indexOf(slideActive);
+
+    if (newIndex < 0) newIndex = [...slides].length - 1;
+    if (newIndex >= [...slides].length) newIndex = 0;
+    slides[newIndex].classList.add("active");
+
+    slideActive.classList.remove("active");
   });
 });
 
